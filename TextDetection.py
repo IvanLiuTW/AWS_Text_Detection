@@ -112,7 +112,7 @@ def oas():
 
 def ods():
     # Step 1 (!!! It's necessary to have an AWS account to access the recognition service)
-    with open('/Users/ivanliu/Desktop/AI大數據/new_user_credentials.csv','r') as input:
+    with open('<your_credentials.csv_path>','r') as input:
         next(input)
         reader = csv.reader(input) 
         for line in reader:
@@ -122,7 +122,7 @@ def ods():
     # Step 2
     global medicineData
 
-    file = '/Users/ivanliu/Desktop/Projects/Project 1 - Python - AWS Rekognition/medicine.csv'
+    file = '<medicine.csv_path'
     with open(file,'rt', newline='') as csvfile:
         rows = csv.reader(csvfile)
         medicineData = [data for data in rows]
@@ -239,7 +239,7 @@ def obs():
         new_df = df[indexOfMedicine]
 
         
-        file = '/Users/ivanliu/Desktop/Projects/Project 1 - Python - AWS Rekognition/records.csv'
+        file = '<create a new records.csv'
         with open(file, 'a', newline='') as csvfile:
             csvWriter = csv.writer(csvfile)
             csvWriter.writerow([new_df[1], timeString])           
@@ -273,7 +273,7 @@ def ocs():
 # Treeview double click
     def treeviewClick(event):
         MsgBox = tk.messagebox.askyesno("注意", "請問要刪除該筆紀錄嗎？")
-        file = '/Users/ivanliu/Desktop/Projects/Project 1 - Python - AWS Rekognition/records.csv'
+        file = 'the <records.csv> path'
         if MsgBox == True:
             with open(file,'a', newline='',encoding="utf-8" ) as cvsfilie:
                 csvfile = tree.selection()[0]
@@ -284,7 +284,7 @@ def ocs():
     tree.bind('<Double-1>', treeviewClick)  
 
     
-    file = '/Users/ivanliu/Desktop/Projects/Project 1 - Python - AWS Rekognition/records.csv'
+    file = 'the <records.csv> path'
     for i in range(len(tree["columns"])):
         with open(file) as csvFile:
             csvReader = csv.reader(csvFile)
