@@ -7,4 +7,4 @@
 
 4. There's still a bug of double clicking, and we are still working on it. 
 
-5. If you have any idea or better ways to improve the code, please share with us, thank you!😃
+5. If you have any idea or better ways to improve the code, please share with us, thank you! 😃
